@@ -8,8 +8,18 @@
 Console.Write("Введите трёхзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int first_num = num / 100;
-int last_num = num % 10;
+if (num > 99 && num < 1000)
+{
+  int first_num = num / 100;
+  int last_num = num % 10;
 
-int result_num = (first_num * 10) + last_num;
-Console.WriteLine(result_num);
+  int result_num = (first_num * 10) + last_num;
+  Console.Write("Задача решена. Результат: ");
+  Console.WriteLine(result_num);
+}
+else
+{
+  Console.WriteLine("Число не трёхзначное");
+}
+
+
