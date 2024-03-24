@@ -5,21 +5,29 @@
 // a = 256 => 26 
 // a = 891 => 81
 
-Console.Write("Введите трёхзначное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+bool finish_algorithm = false;
 
-if (num > 99 && num < 1000)
+do
 {
-  int first_num = num / 100;
-  int last_num = num % 10;
+  Console.Write("Введите трёхзначное число: ");
+  int num = Convert.ToInt32(Console.ReadLine());
 
-  int result_num = (first_num * 10) + last_num;
-  Console.Write("Задача решена. Результат: ");
-  Console.WriteLine(result_num);
-}
-else
-{
-  Console.WriteLine("Число не трёхзначное");
-}
+  if (num > 99 && num < 1000)
+  {
+    finish_algorithm = true;
+    int first_num = num / 100;
+    int last_num = num % 10;
+
+    int result_num = (first_num * 10) + last_num;
+    Console.Write("Задача решена. Результат: ");
+    Console.WriteLine(result_num);
+  }
+  else
+  {
+    Console.WriteLine("Число не трёхзначное!");
+  }
+} while (finish_algorithm == false);
+
+
 
 
