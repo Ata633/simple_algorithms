@@ -64,17 +64,40 @@
 // 16, 8 => да
 // 4, 3 => нет, 1
 // Решение
+// Console.WriteLine("Введите первое число: ");
+// int first_num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Второе число: ");
+// int second_num = Convert.ToInt32(Console.ReadLine());
+// int result = first_num % second_num;
+// if (result == 0)
+// {
+//   Console.WriteLine($"{first_num}, {second_num} => Да, Первое число кратным второму");
+// }
+// else
+// {
+//   Console.WriteLine($"{first_num}, {second_num} => Нет, Первое число некратно второму. Остаток: {result}");
+// }
 
-Console.WriteLine("Введите первое число: ");
-int first_num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите Второе число: ");
-int second_num = Convert.ToInt32(Console.ReadLine());
-int result = first_num % second_num;
-if (result == 0)
+
+// ----- Задание 4*. Совместная работа -----
+// Напишите программу, которая выводит третью с 
+// конца цифру заданного числа или сообщает, что 
+// третьей цифры нет.
+// 456 => 6
+// 7812 => 8
+// 91 => Третьей цифры нет
+// Решение
+int num = new Random().Next(1, 100000);
+Console.WriteLine(num);
+if (num < 100)
 {
-  Console.WriteLine($"{first_num}, {second_num} => Да, Первое число кратным второму");
+  Console.WriteLine($"{num} => Третьей цифры нет");
 }
 else
 {
-  Console.WriteLine($"{first_num}, {second_num} => Нет, Первое число некратно второму. Остаток: {result}");
+  while (num >= 1000)
+  {
+    num /= 10;
+  }
+  Console.WriteLine($"{num} => " + num % 10);
 }
