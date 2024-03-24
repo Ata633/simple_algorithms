@@ -38,17 +38,43 @@
 // 254 => 5^4 = 625
 // 617 => 1
 // Решение
-Console.Write("Выбранное трёхзначное число: ");
-int num = new Random().Next(100, 1000);
-Console.WriteLine(num);
+// Console.Write("Выбранное трёхзначное число: ");
+// int num = new Random().Next(100, 1000);
+// Console.WriteLine(num);
 
-int second_num = (num / 10) % 10;
-int last_num = num % 10;
-int result_num = 1;
+// int second_num = (num / 10) % 10;
+// int last_num = num % 10;
+// int result_num = 1;
 
-while (last_num > 0)
+// while (last_num > 0)
+// {
+//   result_num *= second_num;
+//   last_num--;
+// }
+// Console.Write($"Задача решена. Результат: {result_num}");
+
+
+// ----- Задание 3. Работа в сессионных залах -----
+// Напишите программу, которая будет принимать на 
+// вход два числа и выводить, является ли первое число 
+// кратным второму. Если первое число некратно 
+// второму, то программа выводит остаток от деления.
+// Примеры
+// 14, 5 => нет, 4
+// 16, 8 => да
+// 4, 3 => нет, 1
+// Решение
+
+Console.WriteLine("Введите первое число: ");
+int first_num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Второе число: ");
+int second_num = Convert.ToInt32(Console.ReadLine());
+int result = first_num % second_num;
+if (result == 0)
 {
-  result_num *= second_num;
-  last_num--;
+  Console.WriteLine($"{first_num}, {second_num} => Да, Первое число кратным второму");
 }
-Console.Write($"Задача решена. Результат: {result_num}");
+else
+{
+  Console.WriteLine($"{first_num}, {second_num} => Нет, Первое число некратно второму. Остаток: {result}");
+}
