@@ -87,17 +87,110 @@
 // 7812 => 8
 // 91 => Третьей цифры нет
 // Решение
-int num = new Random().Next(1, 100000);
-Console.WriteLine(num);
-if (num < 100)
+// int num = new Random().Next(1, 100000);
+// Console.WriteLine(num);
+// if (num < 100)
+// {
+//   Console.WriteLine($"{num} => Третьей цифры нет");
+// }
+// else
+// {
+//   while (num >= 1000)
+//   {
+//     num /= 10;
+//   }
+//   Console.WriteLine($"{num} => " + num % 10);
+// }
+
+
+// ----- Домашняя Задание -----
+// Задача 1: Напишите программу, которая принимает 
+// на вход число и проверяет, кратно ли оно 
+// одновременно 7 и 23
+Console.WriteLine("Задача 1:");
+int ex1_num = new Random().Next(7, 1000);
+Console.WriteLine($"Число:{ex1_num}");
+
+if (ex1_num % 7 == 0 && ex1_num % 23 == 0)
 {
-  Console.WriteLine($"{num} => Третьей цифры нет");
+  Console.WriteLine($"Да, число: {ex1_num} => Одновременно кратно числам 7 и 23");
 }
 else
 {
-  while (num >= 1000)
+  Console.WriteLine($"Нет, число: {ex1_num} => Одновременно не кратно числам 7 и 23");
+}
+
+// Задача 2: Напишите программу, которая принимает 
+// на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 
+// 0 и выдаёт номер координатной четверти плоскости, 
+// в которой находится эта точка.
+Console.WriteLine("Задача 2:");
+int x_coor = new Random().Next(-5, 6);
+int y_coor = new Random().Next(-5, 6);
+if (x_coor != 0 && y_coor != 0)
+{
+  if (x_coor > 0 && y_coor > 0)
   {
-    num /= 10;
+    Console.WriteLine($"X = {x_coor}, Y = {y_coor} => Номер координатной четверти плоскости: 1");
   }
-  Console.WriteLine($"{num} => " + num % 10);
+  else if (x_coor < 0 && y_coor > 0)
+  {
+    Console.WriteLine($"X = {x_coor}, Y = {y_coor} => Номер координатной четверти плоскости: 2");
+  }
+  else if (x_coor < 0 && y_coor < 0)
+  {
+    Console.WriteLine($"X = {x_coor}, Y = {y_coor} => Номер координатной четверти плоскости: 3");
+  }
+  else
+  {
+    Console.WriteLine($"X = {x_coor}, Y = {y_coor} => Номер координатной четверти плоскости: 4");
+  }
+}
+else
+{
+  Console.WriteLine("Координаты не должны быть равно к нулю!!!");
+}
+
+// Задача 3: Напишите программу, которая принимает 
+// на вход целое число из отрезка [10, 99] и показывает 
+// наибольшую цифру числа.
+Console.WriteLine("Задача 3:");
+int ex3_num = new Random().Next(10, 100);
+Console.WriteLine($"Число:{ex3_num}");
+int ex3_first_num = ex3_num / 10;
+int ex3_second_num = ex3_num % 10;
+if (ex3_first_num > ex3_second_num)
+{
+  Console.WriteLine($"Первое число:{ex3_first_num} больше чем второе число:{ex3_second_num}");
+}
+else if (ex3_first_num < ex3_second_num)
+{
+  Console.WriteLine($"Второе число:{ex3_second_num} больше чем первое число:{ex3_first_num}");
+}
+else
+{
+  Console.WriteLine($"Первое число:{ex3_first_num} равен второму числу:{ex3_second_num}");
+}
+
+// Задача 4: Напишите программу, которая на вход 
+// принимает натуральное число N, а на выходе 
+// показывает его цифры через запятую.
+Console.WriteLine("Задача 4:");
+int ex4_num = new Random().Next(1, 100000000);
+int r4_num = ex4_num;
+Console.WriteLine($"Число:{ex4_num}");
+if (ex4_num < 10)
+{
+  Console.WriteLine($"Число: {ex4_num} => {ex4_num}");
+}
+else
+{
+  string s_num = string.Empty;
+  while (ex4_num >= 10)
+  {
+    int r_num = ex4_num % 10;
+    s_num = Convert.ToString(r_num) + "," + s_num;
+    ex4_num /= 10;
+  }
+  Console.WriteLine($"{r4_num} => {ex4_num},{s_num.Remove(s_num.Length - 1)}");
 }
