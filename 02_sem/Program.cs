@@ -38,24 +38,17 @@
 // 254 => 5^4 = 625
 // 617 => 1
 // Решение
-Console.Write("Введите трёхзначное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num > 99 && num < 1000)
-{
-  int second_num = (num / 10) % 10;
-  int last_num = num % 10;
-  int result_num = 1;
+Console.Write("Выбранное трёхзначное число: ");
+int num = new Random().Next(100, 1000);
+Console.WriteLine(num);
 
-  while (last_num > 0)
-  {
-    result_num *= second_num;
-    last_num--;
-  }
-  Console.Write("Задача решена. Результат: ");
-  Console.WriteLine(result_num);
-}
-else
-{
-  Console.WriteLine("Число не трёхзначное!");
-}
+int second_num = (num / 10) % 10;
+int last_num = num % 10;
+int result_num = 1;
 
+while (last_num > 0)
+{
+  result_num *= second_num;
+  last_num--;
+}
+Console.Write($"Задача решена. Результат: {result_num}");
