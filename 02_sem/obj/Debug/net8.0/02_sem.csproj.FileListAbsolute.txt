@@ -1,0 +1,15 @@
+E:\01_csharp_exercises\02_sem\bin\Debug\net8.0\02_sem.exe
+E:\01_csharp_exercises\02_sem\bin\Debug\net8.0\02_sem.deps.json
+E:\01_csharp_exercises\02_sem\bin\Debug\net8.0\02_sem.runtimeconfig.json
+E:\01_csharp_exercises\02_sem\bin\Debug\net8.0\02_sem.dll
+E:\01_csharp_exercises\02_sem\bin\Debug\net8.0\02_sem.pdb
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.GeneratedMSBuildEditorConfig.editorconfig
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.AssemblyInfoInputs.cache
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.AssemblyInfo.cs
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.csproj.CoreCompileInputs.cache
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.sourcelink.json
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.dll
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\refint\02_sem.dll
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.pdb
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\02_sem.genruntimeconfig.cache
+E:\01_csharp_exercises\02_sem\obj\Debug\net8.0\ref\02_sem.dll
